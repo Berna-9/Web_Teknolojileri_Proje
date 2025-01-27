@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moda Dünyası - Anasayfa</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div id="loadingScreen">
+        <div id="heartEffect"></div>
+    </div>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="about.html">Hakkımızda</a></li>
+                <li><a href="projects.html">Projeler</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Moda Dünyası'na Hoş Geldiniz!</h1>
+                <p>Her adımda zarafet, her detayda şıklık.</p>
+            </div>
+        </section>
+        <style>
+            .hero {
+                margin-bottom: -200px; /* Varsayılan değeri küçültüldü */
+            }
+        </style>
+
+        <div class="down-arrow"></div>
+        
+        <section class="discounts">
+            <p style="font-size: 40px">Çok Satanlar<p>
+            <div class="slider">
+                <div class="slides">
+                    <img src="77057683_30-99999999_01.avif" alt="İndirim 1" class="visible">
+                    <img src="87060413_99-99999999_01.avif" alt="İndirim 2">
+                    <img src="77035653_92-99999999_01.avif" alt="İndirim 3">
+                    <img src="77035653_92-99999999_01 (1).avif" alt="İndirim 4">
+                    <img src="87004078_30-99999999_01.avif" alt="İndirim 5">
+                    <img src="87060413_99-99999999_01.avif" alt="İndirim 6">
+                </div>
+            </div>
+        </section>
+        <script>
+
+            
+            document.addEventListener('DOMContentLoaded', function() {
+                const slides = document.querySelectorAll('.slides img');
+                let currentIndex = 0;
+    
+                function showNextSlide() {
+                    slides[currentIndex].classList.remove('visible');
+                    currentIndex = (currentIndex + 1) % slides.length;
+                    slides[currentIndex].classList.add('visible');
+                }
+    
+                setInterval(showNextSlide, 2000);
+            });
+        </script>
+
+        <section class="products">
+            <h2>Bu Ayın Trend Parçaları</h2>
+            <br>
+            <div class="product-box">
+                <div class="product">
+                    <img src="87082538_05-99999999_01.avif" alt="Ürün 1">
+                    <button class="add-to-cart">Satın Al</button>
+                </div>
+                <div class="product">
+                    <img src="87082544_06_D7.avif" alt="Ürün 2">
+                    <button class="add-to-cart">Satın Al</button>
+                </div>
+                <div class="product">
+                    <img src="87093274_35-99999999_01.avif" alt="Ürün 3">
+                    <button class="add-to-cart">Satın Al</button>
+                </div>
+                <div class="product">
+                    <img src="87093282_07-99999999_01.avif" alt="Ürün 4">
+                    <button class="add-to-cart">Satın Al</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Moda Dünyası. Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html>
+
